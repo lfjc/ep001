@@ -184,7 +184,7 @@ export default {
 					default:
 						if (env.URL302) return Response.redirect(env.URL302, 302);
 						else if (env.URL) return await proxyURL(env.URL, url);
-						else return new Response('不用怀疑！你PASSWORD就是错的！！！', { status: 404 });
+						else return new Response('404 Not Found', { status: 404 });
 				}
 			} else {
 				socks5Address = url.searchParams.get('socks5') || socks5Address;
